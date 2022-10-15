@@ -25,7 +25,10 @@ jobs:
           poetry-version: 1.2.0b1
 
       - name: Run Tests
-        run: make run_tests
+        run: |
+          pip uninstall pytest
+          pip install pytest
+          make run_tests
 
       - name: Upload Coverage
         uses: codecov/codecov-action@v1
