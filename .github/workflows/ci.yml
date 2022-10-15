@@ -28,7 +28,4 @@ jobs:
         run: |
           pip uninstall pytest
           pip install pytest
-          pytest --cov=./ --cov-report=xml --cov-report=html -vv
-
-      - name: Upload Coverage
-        uses: codecov/codecov-action@v1
+          pytest -vv
